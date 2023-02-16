@@ -47,7 +47,14 @@ resource "aws_subnet" "vorx-subnet-priv-1b" {
     Name = "prod-private-subnet-1b"
   }
 }
- 
+
+resource "aws_internet_gateway" "gw" {
+  vpc_id = aws_vpc.vorx-vpc-prod.id
+
+  tags = {
+    Name = "igw-prod-vorx-vpc"
+  }
+} 
 
 ## OUTPUTS DO NOSSO TF ##
 output "vpc_vorx_prod_id" {
