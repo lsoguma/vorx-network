@@ -138,3 +138,4 @@ value = aws_subnet.vorx-subnet-pub-1b.id
 
 output "vorx_prod_subnet_priv-1b" {
 value = aws_subnet.vorx-subnet-priv-1b.id
+}
